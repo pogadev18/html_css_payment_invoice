@@ -1,25 +1,79 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./styling/reset.css">
   <link rel="stylesheet" href="./styling/main.css">
   <title>Payment Invoice</title>
 </head>
-<body>
-<section class="search-section">
-  <section class="search-input">
-    <img src="./assets/search_icon.svg" alt="Search Icon">
-    <input type="text" placeholder="Search for any training you want">
-  </section>
 
-  <section class="profile-avatar">
-    <img src="./assets/bell_icon.svg" alt="Bell Icon">
-    <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Profile Picture">
-  </section>
-</section>
+<body>
+  <main>
+    <!-- Search Section -->
+    <section class="search-section">
+      <section class="search-input">
+        <img src="./assets/search_icon.svg" alt="Search Icon">
+        <input type="text" placeholder="Search for any training you want">
+      </section>
+
+      <section class="profile-avatar">
+        <img src="./assets/bell_icon.svg" alt="Bell Icon">
+        <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Profile Picture">
+      </section>
+    </section>
+
+    <!-- Info Wrapper -->
+    <section class="info-wrapper">
+
+      <!-- Credit Cards -->
+      <section class="credit-cards">
+        <h2>Your Credit Card</h2>
+
+        <section class="card card-colored">
+          <header class="card-header">
+            <img src="./assets/card_logo_light.svg" alt="Card Icon">
+            <img src="./assets/visa.svg" alt="Visa Icon">
+          </header>
+          <section class="card-body">
+            <p>Number</p>
+            <p>**** **** 222 0034</p>
+            <img src="./assets/card_chip.svg" alt="Card Chip">
+          </section>
+          <footer class="card-footer">
+            <p>Craig S.</p>
+            <div>
+              <p>end date</p>
+              <p>09/25</p>
+            </div>
+          </footer>
+        </section>
+
+        <section class="card">
+          <header class="card-header">
+            <img src="./assets/card_logo_dark.svg" alt="Card Icon">
+            <img src="./assets/visa.svg" alt="Visa Icon">
+          </header>
+          <section class="card-body">
+            <p>Number</p>
+            <p>**** **** 002 0329</p>
+            <img src="./assets/card_chip.svg" alt="Card Chip">
+          </section>
+          <footer class="card-footer">
+            <p>Craig S.</p>
+            <div>
+              <p>end date</p>
+              <p>09/25</p>
+            </div>
+          </footer>
+        </section>
+
+      </section>
+    </section>
+  </main>
 </body>
+
 </html>

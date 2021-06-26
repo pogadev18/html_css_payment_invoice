@@ -12,3 +12,8 @@ p {
   font-size: 14px;
 }
 
+
+.card-colored {
+  background: rgb(149,88,228);
+  background: linear-gradient(90deg, rgba(149,88,228,1) 50%, rgba(217,86,164,1) 100%);
+}
