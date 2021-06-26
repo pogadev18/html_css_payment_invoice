@@ -14,63 +14,119 @@
 <body>
   <main>
     <!-- Search Section -->
-    <section class="search-section">
-      <section class="search-input">
+    <section class="searchSection">
+      <section class="searchInput">
         <img src="./assets/search_icon.svg" alt="Search Icon">
         <input type="text" placeholder="Search for any training you want">
       </section>
 
-      <section class="profile-avatar">
+      <section class="profileAvatar">
         <img src="./assets/bell_icon.svg" alt="Bell Icon">
         <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Profile Picture">
       </section>
     </section>
 
     <!-- Info Wrapper -->
-    <section class="info-wrapper">
+    <section class="invoiceWrapper">
 
       <!-- Credit Cards -->
-      <section class="credit-cards">
+      <section class="cardsAndPayments">
         <h2>Your Credit Card</h2>
 
-        <section class="card card-colored">
-          <header class="card-header">
-            <img src="./assets/card_logo_light.svg" alt="Card Icon">
-            <img src="./assets/visa.svg" alt="Visa Icon">
-          </header>
-          <section class="card-body">
-            <p>Number</p>
-            <p>**** **** 222 0034</p>
-            <img src="./assets/card_chip.svg" alt="Card Chip">
+        <!-- Cards Wrapper -->
+        <section class="cardsWrapper">
+          <section class="card cardColored">
+            <header class="card-header">
+              <img src="./assets/card_logo_light.svg" alt="Card Icon">
+              <img src="./assets/visa.svg" alt="Visa Icon">
+            </header>
+            <section class="card-body">
+              <p>Number</p>
+              <p>**** **** 222 0034</p>
+              <img src="./assets/card_chip.svg" alt="Card Chip">
+            </section>
+            <footer class="card-footer">
+              <p>Craig S.</p>
+              <div>
+                <p>end date</p>
+                <p>09/25</p>
+              </div>
+            </footer>
           </section>
-          <footer class="card-footer">
-            <p>Craig S.</p>
-            <div>
-              <p>end date</p>
-              <p>09/25</p>
-            </div>
-          </footer>
+
+          <section class="card">
+            <header class="card-header">
+              <img src="./assets/card_logo_dark.svg" alt="Card Icon">
+              <img src="./assets/visa.svg" alt="Visa Icon">
+            </header>
+            <section class="card-body">
+              <p>Number</p>
+              <p>**** **** 002 0329</p>
+              <img src="./assets/card_chip.svg" alt="Card Chip">
+            </section>
+            <footer class="card-footer">
+              <p>Craig S.</p>
+              <div>
+                <p>end date</p>
+                <p>09/25</p>
+              </div>
+            </footer>
+          </section>
         </section>
 
-        <section class="card">
-          <header class="card-header">
-            <img src="./assets/card_logo_dark.svg" alt="Card Icon">
-            <img src="./assets/visa.svg" alt="Visa Icon">
-          </header>
-          <section class="card-body">
-            <p>Number</p>
-            <p>**** **** 002 0329</p>
-            <img src="./assets/card_chip.svg" alt="Card Chip">
-          </section>
-          <footer class="card-footer">
-            <p>Craig S.</p>
-            <div>
-              <p>end date</p>
-              <p>09/25</p>
-            </div>
-          </footer>
+        <!-- Payments Wrapper -->
+        <section class="paymentsWrapper">
+          <h3>Recent Payment</h3>
+          <ul>
+            <li>
+              <span>Charge Back</span>
+              <span>Payment</span>
+              <span>Mar 20, 2021</span>
+              <span>-$140,20</span>
+            </li>
+            <li>
+              <span>Information Requested</span>
+              <span>Refund</span>
+              <span>Apr 20, 2021</span>
+              <span>+$40,20</span>
+            </li>
+            <li>
+              <span>Settled</span>
+              <span>Payment</span>
+              <span>June 20, 2021</span>
+              <span>-$74,70</span>
+            </li>
+            <li>
+              <span>Authorised</span>
+              <span>Credit</span>
+              <span>Mar 19, 2021</span>
+              <span>-$1,14</span>
+            </li>
+          </ul>
         </section>
+      </section>
 
+      <!-- Customer Summary -->
+      <section class="customerSummary">
+        <h2>Payment Detail</h2>
+        <section class="customerDetails">
+          <header class="customerAvatar">
+            <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Profile Picture">
+            <p>Adison Rosser</p>
+            <p>Mar 20, 2021</p>
+          </header>
+
+          <section class="customerAmountDue">
+            <p>Amount Due</p>
+            <p>$250.00</p>
+            <p>Visa $250.00</p>
+          </section>
+
+          <section>
+            <p>Billing Plan</p>
+            <p>Company Start</p>
+          </section>
+        </section>
       </section>
     </section>
   </main>
