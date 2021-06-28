@@ -2,15 +2,16 @@
 
 :root {
   --bodyGradient: linear-gradient(90deg, rgba(237,193,211,1) 50%, rgba(179,191,227,1) 100%);
-  --cardGradient: linear-gradient(90deg, rgba(149,88,228,1) 50%, rgba(217,86,164,1) 100%);
+  --cardGradient: linear-gradient(90deg, rgba(149,88,228,1) 20%, rgba(217,86,164,1) 60%);
   --shadow:rgba(0, 0, 0, 0.25) 0px 4px 4px;
   --shadow2: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
   --white: #ffffff;
-  --placeholderGray: #626c7a;
+  --placeholderGray: #9eaabb;
   --lightGray: #d8d8d8;
   --pink: #C74B6D;
   --red: #ba3326;
+  --darkBlue: #41477A;
 }
 
 /* 
@@ -28,7 +29,7 @@ body {
 }
 
 main {
-  width: 1374px;
+  width: 1200px;
   background: var(--white);
   box-shadow: var(--shadow);
   padding: 45px;
@@ -117,7 +118,7 @@ INVOICE WRAPPER
 
 .invoiceWrapper {
   display: flex;
-  gap: 100px;
+  gap: 50px;
 }
 
 /* 
@@ -143,12 +144,6 @@ CARDS AND PAYMENTS
   border-radius: 15px;
 }
 
-.cardColored {
-  background: var(--cardGradient);
-  box-shadow: var(--shadow2);
-  border: 0;
-}
-
 .cardHeader,
 .cardBody,
 .cardFooter {
@@ -164,13 +159,43 @@ CARDS AND PAYMENTS
 .cardBody {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.cardLabel {
+  font-size: 10px;
+  color: var(--placeholderGray);
+}
+
+.cardLabelUppercase {
+  text-transform: uppercase;
+}
+
+.cardNumbers {
+  color: var(--darkBlue);
+  font-size: 18px;
 }
 
 .cardFooter {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-top: 1px solid var(--lightGray)
+  border-top: 1px solid var(--lightGray);
+  color: var(--darkBlue);
+}
+
+.cardColored {
+  background: var(--cardGradient);
+  box-shadow: var(--shadow2);
+  border: 0;
+}
+
+.cardColored .cardNumbers {
+  color: var(--placeholderGray);
+}
+
+.cardColored .cardFooter {
+  color: var(--white);
 }
 
 /* 
