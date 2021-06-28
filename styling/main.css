@@ -308,6 +308,17 @@ PAYMENTS WRAPPER
 CUSTOMER SUMMARY
 ===================
 */
-.customerSummary {
+.customerDetails {
   box-shadow: var(--shadow2);
+  padding: 25px;
+}
+.customerAvatar {
+  text-align: center;
+}
+.customerAvatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
 }
