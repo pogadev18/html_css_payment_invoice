@@ -14,93 +14,102 @@
 <body>
   <main>
     <!-- Search Section -->
-    <section class="searchSection">
-      <section class="searchInput">
+    <header class="searchSection">
+      <div class="searchInput">
         <img src="./assets/search_icon.svg" alt="Search Icon">
         <input type="text" placeholder="Search for any training you want">
-      </section>
+      </div>
 
-      <section class="profileAvatar">
+      <div class="profileAvatar">
         <img src="./assets/bell_icon.svg" alt="Bell Icon">
         <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Profile Picture">
-      </section>
-    </section>
+      </div>
+    </header>
 
     <!-- Info Wrapper -->
-    <section class="invoiceWrapper">
+    <div class="invoiceWrapper">
 
       <!-- Credit Cards -->
       <section class="cardsAndPayments">
         <h2>Your Credit Card</h2>
 
         <!-- Cards Wrapper -->
-        <section class="cardsWrapper">
-          <section class="card cardColored">
-            <header class="card-header">
+        <div class="cardsWrapper">
+
+          <div class="card cardColored">
+            <div class="card-header">
               <img src="./assets/card_logo_light.svg" alt="Card Icon">
               <img src="./assets/visa.svg" alt="Visa Icon">
-            </header>
-            <section class="card-body">
+            </div>
+            <div class="card-body">
               <p>Number</p>
               <p>**** **** 222 0034</p>
               <img src="./assets/card_chip.svg" alt="Card Chip">
-            </section>
-            <footer class="card-footer">
+            </div>
+            <div class="card-footer">
               <p>Craig S.</p>
               <div>
                 <p>end date</p>
                 <p>09/25</p>
               </div>
-            </footer>
-          </section>
+            </div>
+          </div>
 
-          <section class="card">
-            <header class="card-header">
+          <div class="card">
+            <div class="card-header">
               <img src="./assets/card_logo_dark.svg" alt="Card Icon">
               <img src="./assets/visa.svg" alt="Visa Icon">
-            </header>
-            <section class="card-body">
+            </div>
+            <div class="card-body">
               <p>Number</p>
               <p>**** **** 002 0329</p>
               <img src="./assets/card_chip.svg" alt="Card Chip">
-            </section>
-            <footer class="card-footer">
+            </div>
+            <div class="card-footer">
               <p>Craig S.</p>
               <div>
                 <p>end date</p>
                 <p>09/25</p>
               </div>
-            </footer>
-          </section>
-        </section>
+            </div>
+          </div>
+        </div>
 
         <!-- Payments Wrapper -->
         <section class="paymentsWrapper">
           <h3>Recent Payment</h3>
           <ul>
             <li>
-              <span>Charge Back</span>
-              <span>Payment</span>
-              <span>Mar 20, 2021</span>
-              <span>-$140,20</span>
+              <ul>
+                <li>Charge Back</li>
+                <li>Payment</li>
+                <li>Mar 20, 2021</li>
+                <li>-$140,20</li>
+              </ul>
             </li>
             <li>
-              <span>Information Requested</span>
-              <span>Refund</span>
-              <span>Apr 20, 2021</span>
-              <span>+$40,20</span>
+              <ul>
+                <li>Information Requested</li>
+                <li>Refund</li>
+                <li>Apr 20, 2021</li>
+                <li>+$40,20</li>
+              </ul>
             </li>
             <li>
-              <span>Settled</span>
-              <span>Payment</span>
-              <span>June 20, 2021</span>
-              <span>-$74,70</span>
+              <ul>
+                <li>Settled</li>
+                <li>Payment</li>
+                <li>June 20, 2021</li>
+                <li>-$74,70</li>
+              </ul>
             </li>
             <li>
-              <span>Authorised</span>
-              <span>Credit</span>
-              <span>Mar 19, 2021</span>
-              <span>-$1,14</span>
+              <ul>
+                <li>Authorised</li>
+                <li>Credit</li>
+                <li>Mar 19, 2021</li>
+                <li>-$1,14</li>
+              </ul>
             </li>
           </ul>
         </section>
@@ -109,26 +118,67 @@
       <!-- Customer Summary -->
       <section class="customerSummary">
         <h2>Payment Detail</h2>
-        <section class="customerDetails">
-          <header class="customerAvatar">
+        <div class="customerDetails">
+          <div class="customerAvatar">
             <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Profile Picture">
             <p>Adison Rosser</p>
             <p>Mar 20, 2021</p>
-          </header>
+          </div>
 
-          <section class="customerAmountDue">
+          <div class="customerAmountDue">
             <p>Amount Due</p>
             <p>$250.00</p>
             <p>Visa $250.00</p>
-          </section>
+          </div>
 
-          <section>
+          <div class="billingPlan">
             <p>Billing Plan</p>
             <p>Company Start</p>
-          </section>
-        </section>
+            <ul class="billingDetails">
+              <li>5 team member ($8 / Month each)</li>
+              <li>100 GB Extra storage ($25.00)</li>
+              <li>8 extra hours ($2 / hour)</li>
+            </ul>
+          </div>
+
+          <div class="billingAddress">
+            <ul>
+              <li>
+                <ul>
+                  <li>Billing Plan</li>
+                  <li>275 New North</li>
+                  <li>Road, London</li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>Invoice Number</li>
+                  <li>49682</li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>Due Date</li>
+                  <li>15 March, 2020</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="billingTotal">
+            <ul>
+              <li>
+                <ul>
+                  <li>Subtotal $250.00</li>
+                  <li>Tax $25.00</li>
+                </ul>
+              </li>
+            </ul>
+            <p>Ammount Due (USD): $275.00</p>
+          </div>
+        </div>
       </section>
-    </section>
+    </div>
   </main>
 </body>
 

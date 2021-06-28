@@ -1,15 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto+Mono:wght@700&display=swap');
 
 :root {
-    --mainColor: #ba3326;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
+  --bodyGradient: linear-gradient(90deg, rgba(237,193,211,1) 50%, rgba(179,191,227,1) 100%);
+  --cardGradient: linear-gradient(90deg, rgba(149,88,228,1) 50%, rgba(217,86,164,1) 100%);
+  --white: #ffffff;
+  --shadow:rgba(0, 0, 0, 0.25) 0px 4px 4px;
 }
 
 p {
   font-size: 14px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bodyGradient);
+}
+
+main {
+  width: 1374px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  padding: 45px;
+  border-radius: 25px;
+}
+
+/* 
+HEADER
+======= 
+*/
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .invoiceWrapper {
@@ -25,6 +52,5 @@ p {
 }
 
 .cardColored {
-  background: rgb(149,88,228);
-  background: linear-gradient(90deg, rgba(149,88,228,1) 50%, rgba(217,86,164,1) 100%);
+  background: var(--cardGradient);
 }
