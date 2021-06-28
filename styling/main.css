@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto+Mono:wght@700&display=swap&family=Montserrat&display=swap');
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 :root {
   --bodyGradient: linear-gradient(90deg, rgba(237,193,211,1) 50%, rgba(179,191,227,1) 100%);
   --cardGradient: linear-gradient(90deg, rgba(149,88,228,1) 20%, rgba(217,86,164,1) 60%);
@@ -8,6 +16,7 @@
 
   --white: #ffffff;
   --placeholderGray: #9eaabb;
+  --cardBorder: #c4c4c4;
   --lightGray: #d8d8d8;
   --pink: #C74B6D;
   --red: #ba3326;
@@ -43,6 +52,15 @@ p {
 h2 {
   font-weight: bold;
   font-size: 24px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+h2,
+h3 {
   margin-bottom: 20px;
 }
 
@@ -140,7 +158,7 @@ CARDS AND PAYMENTS
 .card {
   font-family: 'Roboto Mono', monospace;
   flex: 1 0 0;
-  border: 1px solid var(--placeholderGray);
+  border: 1px solid var(--cardBorder);
   border-radius: 15px;
 }
 
@@ -196,6 +214,28 @@ CARDS AND PAYMENTS
 
 .cardColored .cardFooter {
   color: var(--white);
+}
+
+/* 
+PAYMENTS WRAPPER
+================
+*/
+.paymentsWrapper {
+  margin-top: 30px;
+}
+
+/* Payments Lists */
+.nestedList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nestedList > li {
+  flex: 1;
+}
+
+.nestedList > li:nth-last-child(-n+3) {
+  text-align: right;
 }
 
 /* 
