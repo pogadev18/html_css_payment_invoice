@@ -15,38 +15,42 @@
   <main>
     <!-- Search Section -->
     <header class="searchSection">
-      <div class="searchInput">
+      <div class="searchInputWrapper">
         <img src="./assets/search_icon.svg" alt="Search Icon">
         <input type="text" placeholder="Search for any training you want">
       </div>
 
-      <div class="profileAvatar">
-        <img src="./assets/bell_icon.svg" alt="Bell Icon">
-        <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Profile Picture">
+      <div class="profileWrapper">
+        <a href="#0" class="bellIconWrapper">
+          <img src="./assets/bell_icon.svg" alt="Bell Icon">
+        </a>
+        <img class="profileImage" src="https://randomuser.me/api/portraits/men/81.jpg" alt="Profile Picture">
       </div>
     </header>
 
-    <!-- Info Wrapper -->
+    <!-- Invoice Wrapper -->
     <div class="invoiceWrapper">
 
-      <!-- Credit Cards -->
-      <section class="cardsAndPayments">
+      <!-- Cards and Payments -->
+      <section class="cardsAndPaymentsWrapper">
         <h2>Your Credit Card</h2>
 
         <!-- Cards Wrapper -->
         <div class="cardsWrapper">
 
           <div class="card cardColored">
-            <div class="card-header">
+            <div class="cardHeader">
               <img src="./assets/card_logo_light.svg" alt="Card Icon">
-              <img src="./assets/visa.svg" alt="Visa Icon">
+              <img src="./assets/visa_light.svg" alt="Visa Icon">
             </div>
-            <div class="card-body">
-              <p>Number</p>
-              <p>**** **** 222 0034</p>
-              <img src="./assets/card_chip.svg" alt="Card Chip">
+            <div class="cardBody">
+              <ul>
+                <li>Number</li>
+                <li>**** **** 222 0034</li>
+              </ul>
+              <img src="./assets/card_chip_light.svg" alt="Card Chip">
             </div>
-            <div class="card-footer">
+            <div class="cardFooter">
               <p>Craig S.</p>
               <div>
                 <p>end date</p>
@@ -56,16 +60,18 @@
           </div>
 
           <div class="card">
-            <div class="card-header">
+            <div class="cardHeader">
               <img src="./assets/card_logo_dark.svg" alt="Card Icon">
-              <img src="./assets/visa.svg" alt="Visa Icon">
+              <img src="./assets/visa_dark.svg" alt="Visa Icon">
             </div>
-            <div class="card-body">
-              <p>Number</p>
-              <p>**** **** 002 0329</p>
-              <img src="./assets/card_chip.svg" alt="Card Chip">
+            <div class="cardBody">
+              <ul>
+                <li>Number</li>
+                <li>**** **** 002 0329</li>
+              </ul>
+              <img src="./assets/card_chip_dark.svg" alt="Card Chip">
             </div>
-            <div class="card-footer">
+            <div class="cardFooter">
               <p>Craig S.</p>
               <div>
                 <p>end date</p>

@@ -1,15 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto+Mono:wght@700&display=swap&family=Montserrat&display=swap');
 
 :root {
   --bodyGradient: linear-gradient(90deg, rgba(237,193,211,1) 50%, rgba(179,191,227,1) 100%);
   --cardGradient: linear-gradient(90deg, rgba(149,88,228,1) 50%, rgba(217,86,164,1) 100%);
-  --white: #ffffff;
   --shadow:rgba(0, 0, 0, 0.25) 0px 4px 4px;
+  --shadow2: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+  --white: #ffffff;
+  --placeholderGray: #626c7a;
+  --lightGray: #d8d8d8;
+  --pink: #C74B6D;
+  --red: #ba3326;
 }
 
-p {
-  font-size: 14px;
-}
+/* 
+  GENERAL STYLING
+  ===============
+*/
 
 body {
   height: 100vh;
@@ -28,6 +35,31 @@ main {
   border-radius: 25px;
 }
 
+p {
+  font-size: 14px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+input[type="text"]::placeholder {
+  color: var(--placeholderGray);
+}
+
+input[type="text"]:focus {
+  outline: 0;
+  border-bottom: 1px solid var(--placeholderGray);
+}
+
 /* 
 HEADER
 ======= 
@@ -37,20 +69,114 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
+
+.searchInputWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.searchInputWrapper input {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.profileWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.profileImage {
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--pink);
+  margin-left: 20px;
+  padding: 2px;
+}
+
+.bellIconWrapper {
+  position: relative;
+}
+
+.bellIconWrapper::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--red);
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+/* 
+INVOICE WRAPPER
+================ 
+*/
 
 .invoiceWrapper {
   display: flex;
+  gap: 100px;
 }
 
-.cardsAndPayments {
-  border: 2px solid blue;
+/* 
+CARDS AND PAYMENTS
+===================
+*/
+
+.cardsAndPaymentsWrapper {
+  flex: 1 0 0;
 }
 
-.customerSummary {
-  border: 2px solid lightsalmon;
+/* Cards Wrapper */
+.cardsWrapper {
+  display: flex;
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  font-family: 'Roboto Mono', monospace;
+  flex: 1 0 0;
+  border: 1px solid var(--placeholderGray);
+  border-radius: 15px;
 }
 
 .cardColored {
   background: var(--cardGradient);
+  box-shadow: var(--shadow2);
+  border: 0;
+}
+
+.cardHeader,
+.cardBody,
+.cardFooter {
+  padding: 25px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid var(--lightGray)
+}
+
+/* 
+CUSTOMER SUMMARY
+===================
+*/
+.customerSummary {
+  box-shadow: var(--shadow2);
 }
