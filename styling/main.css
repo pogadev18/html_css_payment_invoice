@@ -11,8 +11,8 @@ html {
 :root {
   --bodyGradient: linear-gradient(90deg, rgba(237,193,211,1) 50%, rgba(179,191,227,1) 100%);
   --cardGradient: linear-gradient(90deg, rgba(149,88,228,1) 20%, rgba(217,86,164,1) 60%);
-  --shadow:rgba(0, 0, 0, 0.25) 0px 4px 4px;
-  --shadow2: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  --shadow: 0 10px 6px -6px #777;
+  --shadow2: 0 1px 5px rgba(0, 0, 0, 0.15);
 
   --white: #ffffff;
   --placeholderGray: #9eaabb;
@@ -77,6 +77,7 @@ h3 {
 
 input[type="text"] {
   border: 0;
+  border-bottom: 1px solid transparent;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
 }
@@ -90,10 +91,15 @@ input[type="text"]:focus {
   border-bottom: 1px solid var(--placeholderGray);
 }
 
-.labelSmall {
+.labelSmall,
+.labelUppercase {
   font-weight: 300;
   font-size: 11px;
   color: var(--placeholderGray);
+}
+
+.labelUppercase {
+  text-transform: uppercase;
 }
 
 .labelBig {
@@ -123,7 +129,7 @@ header {
   margin-left: 10px;
 }
 
-.profileWrapper {
+.userWrapper {
   display: flex;
   align-items: center;
 }
@@ -137,6 +143,7 @@ header {
 }
 
 .bellIconWrapper {
+  cursor: pointer;
   position: relative;
 }
 
@@ -190,25 +197,12 @@ CARDS AND PAYMENTS
   padding: 25px;
 }
 
-.cardHeader {
+.cardHeader,
+.cardBody,
+.cardFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.cardBody {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.cardLabel {
-  font-size: 10px;
-  color: var(--placeholderGray);
-}
-
-.cardLabelUppercase {
-  text-transform: uppercase;
 }
 
 .cardNumbers {
@@ -217,8 +211,6 @@ CARDS AND PAYMENTS
 }
 
 .cardFooter {
-  display: flex;
-  justify-content: space-between;
   align-items: flex-end;
   border-top: 1px solid var(--lightGray);
   color: var(--darkBlue);
@@ -226,7 +218,7 @@ CARDS AND PAYMENTS
 
 .cardColored {
   background: var(--cardGradient);
-  box-shadow: var(--shadow2);
+  box-shadow: var(--shadow);
   border: 0;
 }
 
@@ -246,7 +238,7 @@ PAYMENTS WRAPPER
   margin-top: 30px;
 }
 
-/* Payments Lists */
+/* main payments lists */
 .mainPaymentsList {
   margin-top: 30px;
 }
@@ -265,15 +257,7 @@ PAYMENTS WRAPPER
   transform: scale(1.02);
 }
 
-.nestedPaymentsList > li {
-  position: relative;
-}
-
-.nestedPaymentsList .paymentsStatus {
-  padding-left: 15px;
-  text-transform: uppercase;
-}
-
+/* main and nested payments list "circles" */
 .mainPaymentsList > li::before,
 .nestedPaymentsList .paymentsStatus::before {
   content: '';
@@ -290,6 +274,26 @@ PAYMENTS WRAPPER
   border: 2px solid var(--transparentBlack);
 }
 
+/* nested payments lists */
+.nestedPaymentsList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nestedPaymentsList > li {
+  position: relative;
+  flex: 1;
+}
+
+.nestedPaymentsList li:first-child {
+  flex: 2;
+}
+
+.nestedPaymentsList .paymentsStatus {
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
 .nestedPaymentsList .paymentsStatus.payment::before {
   background: var(--paymentColor);
 }
@@ -302,21 +306,8 @@ PAYMENTS WRAPPER
   background: var(--creditColor);
 }
 
-.nestedPaymentsList {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nestedPaymentsList li:first-child {
-  flex: 2;
-}
-
 .nestedPaymentsList li:last-child {
   color: var(--paymentColor)
-}
-
-.nestedPaymentsList > li {
-  flex: 1;
 }
 
 /* 
