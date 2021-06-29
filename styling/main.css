@@ -27,6 +27,8 @@ html {
   --paymentColor: #F2994A;
   --refundColor: #3A91C1;
   --creditColor: #5A4C79;
+
+  --transitionRule: all .2s ease-in-out;
 }
 
 /* 
@@ -107,6 +109,29 @@ input[type="text"]:focus {
   font-weight: 700;
 }
 
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: block;
+  background: var(--pink);
+  color: var(--white);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border: 1px solid transparent;
+  transition: var(--transitionRule);
+}
+
+.button:hover {
+  color: var(--pink);
+  border: 1px solid var(--pink);
+  background: transparent;
+}
+
 /* 
 HEADER
 ======= 
@@ -159,11 +184,11 @@ header {
 }
 
 /* 
-INVOICE WRAPPER
-================ 
+BASKET WRAPPER
+=============== 
 */
 
-.invoiceWrapper {
+.basketWrapper {
   display: flex;
   gap: 50px;
 }
@@ -250,7 +275,7 @@ PAYMENTS WRAPPER
   padding: 0 0 20px 15px;
   font-size: 14px;
   cursor: pointer;
-  transition: all .2s ease-in-out;;
+  transition: var(--transitionRule);
 }
 
 .mainPaymentsList > li:hover {
@@ -276,8 +301,27 @@ PAYMENTS WRAPPER
 
 /* nested payments lists */
 .nestedPaymentsList {
+  position: relative;
   display: flex;
   justify-content: space-between;
+}
+
+/* eye icon for the nested payments list */
+.nestedPaymentsList::after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background: url("../assets/eye_icon.svg") center center no-repeat;
+  transition: var(--transitionRule);
+}
+
+.mainPaymentsList > li:hover .nestedPaymentsList::after {
+  opacity: 1;
 }
 
 .nestedPaymentsList > li {
@@ -294,6 +338,10 @@ PAYMENTS WRAPPER
   text-transform: uppercase;
 }
 
+.nestedPaymentsList img {
+  width: 15px;
+}
+
 .nestedPaymentsList .paymentsStatus.payment::before {
   background: var(--paymentColor);
 }
@@ -307,14 +355,14 @@ PAYMENTS WRAPPER
 }
 
 .nestedPaymentsList li:last-child {
-  color: var(--paymentColor)
+  color: var(--paymentColor);
 }
 
 /* 
-CUSTOMER SUMMARY
+PAYMENT DETAILS
 =================
 */
-.customerDetailsWrapper {
+.paymentDetailsWrapper {
   box-shadow: var(--shadow2);
   padding: 0 25px;
 }
@@ -330,21 +378,21 @@ CUSTOMER SUMMARY
 /* todo: create a general class for this and then add it to HTML
  (o ai mai sus)
 */
-.customerAvatar,
-.customerAmountDue,
-.billingPlan,
+.userAvatar,
+.userAmountDue,
+.productName,
 .billingAddress {
   text-align: center;
   border-bottom: 1px solid var(--cardBorder);
   padding: 15px 0;
 }
 
-.customerDetailsWrapper .labelBig {
+.paymentDetailsWrapper .labelBig {
   margin: 10px 0;
 }
 
 /* Customer Avatar Section */
-.customerAvatar img {
+.userAvatar img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -358,22 +406,22 @@ CUSTOMER SUMMARY
 }
 
 /* Billing Plan Section */
-.billingPlan .labelSmall {
+.productName .labelSmall {
   margin-bottom: 10px;
 }
 
-.billingPlanDetails {
+.productNameDetails {
   font-size: 12px;
   background: #e8e8e8;
   padding: 15px 30px;
   border-radius: 15px;
 }
 
-.billingPlanDetails li {
+.productNameDetails li {
   margin-bottom: 10px;
 }
 
-.billingPlanDetails li:last-child {
+.productNameDetails li:last-child {
   margin-bottom: 0;
 }
 
@@ -405,6 +453,7 @@ CUSTOMER SUMMARY
 .billingTotalList {
   justify-content: space-between;
   align-items: flex-end;
+  margin-bottom: 20px;
 }
 
 .billingTotalList li {

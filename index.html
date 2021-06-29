@@ -17,7 +17,7 @@
     <header>
       <div class="searchInputWrapper">
         <img src="./assets/search_icon.svg" alt="Search Icon">
-        <input type="text" placeholder="Search for any training you want">
+        <input type="text" placeholder="Search your products">
       </div>
 
       <div class="userWrapper">
@@ -28,8 +28,8 @@
       </div>
     </header>
 
-    <!-- Invoice Wrapper -->
-    <div class="invoiceWrapper">
+    <!-- Basket Wrapper -->
+    <div class="basketWrapper">
 
       <!-- Cards and Payments -->
       <section class="cardsAndPaymentsWrapper">
@@ -51,7 +51,7 @@
               <img src="./assets/card_chip_light.svg" alt="Card Chip">
             </div>
             <div class="cardFooter">
-              <p>Craig S.</p>
+              <p>Jackie C.</p>
               <ul>
                 <li class="labelSmall labelUppercase">end date</li>
                 <li>09/25</li>
@@ -72,7 +72,7 @@
               <img src="./assets/card_chip_dark.svg" alt="Card Chip">
             </div>
             <div class="cardFooter">
-              <p>Craig S.</p>
+              <p>Jackie C.</p>
               <ul>
                 <li class="labelSmall labelUppercase">end date</li>
                 <li>09/25</li>
@@ -87,15 +87,15 @@
           <ul class="mainPaymentsList">
             <li>
               <ul class="nestedPaymentsList">
-                <li>Charge Back</li>
-                <li class="paymentsStatus payment">Payment</li>
+                <li>SteelSeries Arctis 3</li>
+                <li class="paymentsStatus payment">paid</li>
                 <li>Mar 20, 2021</li>
                 <li>-$140,20</li>
               </ul>
             </li>
             <li>
               <ul class="nestedPaymentsList">
-                <li>Information Requested</li>
+                <li>Sony A8H TV</li>
                 <li class="paymentsStatus refund">Refund</li>
                 <li>Apr 20, 2021</li>
                 <li>+$40,20</li>
@@ -103,47 +103,55 @@
             </li>
             <li>
               <ul class="nestedPaymentsList">
-                <li>Settled</li>
-                <li class="paymentsStatus payment">Payment</li>
+                <li>LG 27GL83A-B 27 Monitor</li>
+                <li class="paymentsStatus payment">paid</li>
                 <li>June 20, 2021</li>
                 <li>-$74,70</li>
               </ul>
             </li>
             <li>
               <ul class="nestedPaymentsList">
-                <li>Authorised</li>
+                <li>Acer Aspire 5 Laptop</li>
                 <li class="paymentsStatus credit">Credit</li>
                 <li>Mar 19, 2021</li>
-                <li>-$1,14</li>
+                <li>-$31,14</li>
+              </ul>
+            </li>
+            <li>
+              <ul class="nestedPaymentsList">
+                <li>Skullcandy Earbuds</li>
+                <li class="paymentsStatus payment">paid</li>
+                <li>Dec. 15, 2021</li>
+                <li>-$18,11</li>
               </ul>
             </li>
           </ul>
         </section>
       </section>
 
-      <!-- Customer Summary -->
+      <!-- Payment Details -->
       <section>
         <h2>Payment Detail</h2>
-        <div class="customerDetailsWrapper">
-          <div class="customerAvatar">
+        <div class="paymentDetailsWrapper">
+          <div class="userAvatar">
             <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Profile Picture">
             <p class="customerName">Jackie Chan</p>
             <p class="labelSmall">Mar 20, 2021</p>
           </div>
 
-          <div class="customerAmountDue">
+          <div class="userAmountDue">
             <p class="labelSmall">Amount Due</p>
-            <p class="labelBig">$250.00</p>
-            <p class="labelSmall">Visa $250.00</p>
+            <p class="labelBig">$105.99</p>
+            <p class="labelSmall">Visa $105.99</p>
           </div>
 
-          <div class="billingPlan">
-            <p class="labelSmall">Billing Plan</p>
-            <h4>Company Start</h4>
-            <ul class="billingPlanDetails">
-              <li>5 team members ($8 / Month each)</li>
-              <li>100 GB Extra storage ($25.00)</li>
-              <li>8 extra hours ($2 / hour)</li>
+          <div class="productName">
+            <p class="labelSmall">Product Name</p>
+            <h4>iPhone 12 PRO Elando Case</h4>
+            <ul class="productNameDetails">
+              <li>Crystal Clear and Anti-yellowing</li>
+              <li>Shockproof Military Graded</li>
+              <li>Lightweight and Easy to Carry</li>
             </ul>
           </div>
 
@@ -151,7 +159,7 @@
             <ul class="billingAddressList">
               <li>
                 <ul>
-                  <li class="labelSmall">Billing Plan</li>
+                  <li class="labelSmall">Billing Address</li>
                   <li>275 New North</li>
                   <li>Road, London</li>
                 </ul>
@@ -181,6 +189,9 @@
               </li>
               <li><span class="labelSmall">Ammount Due (USD):</span> <span class="totalAmount">$275.00</span></li>
             </ul>
+            <a href="./pages/checkout.html" class="button mainButton">
+              Proceed to checkout
+            </a>
           </div>
         </div>
       </section>
