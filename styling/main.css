@@ -17,7 +17,7 @@ html {
   --white: #ffffff;
   --placeholderGray: #9eaabb;
   --cardBorder: #c4c4c4;
-  --lightGray: #d8d8d8;
+  --lightGray: #e8e8e8;
   --pink: #C74B6D;
   --transparentPink: rgba(199, 75, 108, 0.620);
   --transparentBlack: rgba(0, 0, 0, 0.199);
@@ -361,7 +361,7 @@ CUSTOMER SUMMARY
 
 .billingPlanDetails {
   font-size: 12px;
-  background: var(--lightGray);
+  background: #e8e8e8;
   padding: 15px 30px;
   border-radius: 15px;
 }
@@ -401,4 +401,18 @@ CUSTOMER SUMMARY
 
 .billingTotalList {
   align-items: flex-end;
+  justify-content: space-between;
+}
+
+.billingTotalList li {
+  font-size: 12px;
+  text-align: right;
+}
+
+.billingTotalList .nestedList li:first-child {
+  margin-bottom: 5px;
+}
+
+.billingTotalList .totalAmount {
+  font-weight: 700;
 }
