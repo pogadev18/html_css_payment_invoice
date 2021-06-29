@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -127,44 +127,44 @@
         <div class="customerDetails">
           <div class="customerAvatar">
             <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Profile Picture">
-            <p>Jackie Chan</p>
-            <p>Mar 20, 2021</p>
+            <p class="customerName">Jackie Chan</p>
+            <p class="labelSmall">Mar 20, 2021</p>
           </div>
 
           <div class="customerAmountDue">
-            <p>Amount Due</p>
-            <p>$250.00</p>
-            <p>Visa $250.00</p>
+            <p class="labelSmall">Amount Due</p>
+            <p class="labelBig">$250.00</p>
+            <p class="labelSmall">Visa $250.00</p>
           </div>
 
           <div class="billingPlan">
-            <p>Billing Plan</p>
-            <p>Company Start</p>
-            <ul class="billingDetails">
-              <li>5 team member ($8 / Month each)</li>
+            <p class="labelSmall">Billing Plan</p>
+            <h4>Company Start</h4>
+            <ul class="billingPlanDetails">
+              <li>5 team members ($8 / Month each)</li>
               <li>100 GB Extra storage ($25.00)</li>
               <li>8 extra hours ($2 / hour)</li>
             </ul>
           </div>
 
           <div class="billingAddress">
-            <ul>
+            <ul class="billingAddressList">
               <li>
                 <ul>
-                  <li>Billing Plan</li>
+                  <li class="labelSmall">Billing Plan</li>
                   <li>275 New North</li>
                   <li>Road, London</li>
                 </ul>
               </li>
               <li>
                 <ul>
-                  <li>Invoice Number</li>
+                  <li class="labelSmall">Invoice Number</li>
                   <li>49682</li>
                 </ul>
               </li>
               <li>
                 <ul>
-                  <li>Due Date</li>
+                  <li class="labelSmall">Due Date</li>
                   <li>15 March, 2020</li>
                 </ul>
               </li>
@@ -172,15 +172,15 @@
           </div>
 
           <div class="billingTotal">
-            <ul>
+            <ul class="billingTotalList">
               <li>
                 <ul>
-                  <li>Subtotal $250.00</li>
-                  <li>Tax $25.00</li>
+                  <li><span class="labelSmall">Subtotal</span> $250.00</li>
+                  <li><span class="labelSmall">Tax</span> $25.00</li>
                 </ul>
               </li>
+              <li><span class="labelSmall">Ammount Due (USD):</span> $275.00</li>
             </ul>
-            <p>Ammount Due (USD): $275.00</p>
           </div>
         </div>
       </section>

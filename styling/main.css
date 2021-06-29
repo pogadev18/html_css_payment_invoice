@@ -65,6 +65,11 @@ h3 {
   font-size: 18px;
 }
 
+h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
 h2,
 h3 {
   margin-bottom: 20px;
@@ -83,6 +88,17 @@ input[type="text"]::placeholder {
 input[type="text"]:focus {
   outline: 0;
   border-bottom: 1px solid var(--placeholderGray);
+}
+
+.labelSmall {
+  font-weight: 300;
+  font-size: 11px;
+  color: var(--placeholderGray);
+}
+
+.labelBig {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 /* 
@@ -303,22 +319,86 @@ PAYMENTS WRAPPER
   flex: 1;
 }
 
-
 /* 
 CUSTOMER SUMMARY
 ===================
 */
 .customerDetails {
   box-shadow: var(--shadow2);
-  padding: 25px;
+  padding: 0 25px;
 }
-.customerAvatar {
+
+.customerAvatar,
+.customerAmountDue,
+.billingPlan,
+.billingAddress {
   text-align: center;
+  border-bottom: 1px solid var(--cardBorder);
+  padding: 15px 0;
 }
+.customerDetails .labelBig {
+  margin: 10px 0;
+}
+
+/* Customer Avatar Section */
 .customerAvatar img {
   width: 60px;
   height: 60px;
   border-radius: 100%;
   display: block;
   margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.customerName {
+  margin-bottom: 5px;
+}
+
+/* Billing Plan Section */
+.billingPlan .labelSmall {
+  margin-bottom: 10px;
+}
+
+.billingPlanDetails {
+  font-size: 12px;
+  background: var(--lightGray);
+  padding: 15px 30px;
+  border-radius: 15px;
+}
+
+.billingPlanDetails li {
+  margin-bottom: 10px;
+}
+
+.billingPlanDetails li:last-child {
+  margin-bottom: 0;
+}
+
+/* Billing Address Section */
+.billingAddress {
+  text-align: left;
+}
+
+.billingAddressList,
+.billingTotalList {
+  display: flex;
+  gap: 20px;
+}
+
+.billingAddress .labelSmall {
+  margin-bottom: 5px;
+}
+
+.billingAddress li:not(.labelSmall) {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* Billing Total Section */
+.billingTotal {
+  padding: 15px 0;
+}
+
+.billingTotalList {
+  align-items: flex-end;
 }
