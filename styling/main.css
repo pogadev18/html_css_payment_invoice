@@ -312,13 +312,24 @@ PAYMENTS WRAPPER
 
 /* 
 CUSTOMER SUMMARY
-===================
+=================
 */
-.customerDetails {
+.customerDetailsWrapper {
   box-shadow: var(--shadow2);
   padding: 0 25px;
 }
 
+
+
+/* .centeredContent { -> mut-o sus la general stuff
+  text-align: center;
+  border-bottom: 1px solid var(--cardBorder);
+  padding: 15px 0;
+} */
+
+/* todo: create a general class for this and then add it to HTML
+ (o ai mai sus)
+*/
 .customerAvatar,
 .customerAmountDue,
 .billingPlan,
@@ -327,7 +338,8 @@ CUSTOMER SUMMARY
   border-bottom: 1px solid var(--cardBorder);
   padding: 15px 0;
 }
-.customerDetails .labelBig {
+
+.customerDetailsWrapper .labelBig {
   margin: 10px 0;
 }
 
@@ -335,7 +347,7 @@ CUSTOMER SUMMARY
 .customerAvatar img {
   width: 60px;
   height: 60px;
-  border-radius: 100%;
+  border-radius: 50%;
   display: block;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -391,8 +403,8 @@ CUSTOMER SUMMARY
 }
 
 .billingTotalList {
-  align-items: flex-end;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .billingTotalList li {
