@@ -391,12 +391,16 @@ PAYMENT DETAILS
   flex: 1;
 }
 
+.inBasketProducts {
+  font-size: 15px;
+  position: relative;
+  top: -2px;
+}
+
 .paymentDetailsWrapper {
   box-shadow: var(--shadow2);
   padding: 0 25px;
 }
-
-
 
 /* .centeredContent { -> mut-o sus la general stuff
   text-align: center;
@@ -420,7 +424,11 @@ PAYMENT DETAILS
   margin: 10px 0;
 }
 
-/* Customer Avatar Section */
+/* User Avatar Section */
+.userAvatar {
+  position: relative;
+}
+
 .userAvatar img {
   width: 60px;
   height: 60px;
@@ -430,7 +438,7 @@ PAYMENT DETAILS
   margin-bottom: 10px;
 }
 
-.customerName {
+.userName {
   margin-bottom: 5px;
 }
 
