@@ -483,10 +483,9 @@ PAYMENT DETAILS
   text-align: left;
 }
 
-.billingAddressList,
-.billingTotalList {
+.billingAddressList {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .billingAddress .labelSmall {
@@ -504,6 +503,7 @@ PAYMENT DETAILS
 }
 
 .billingTotalList {
+  display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 20px;
