@@ -549,11 +549,25 @@ MOBILE
     height: auto;
   }
 
-  .basketWrapper {
+  .cardsWrapper {
     flex-direction: column;
   }
 
-  .cardsAndPaymentsWrapper {
-    flex-basis: auto;
+  .billingAddressList {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .billingTotalList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .billingTotalList li {
+    text-align: center;
+  }
+
+  .billingTotalList li:first-child {
+    margin-bottom: 10px;
   }
 }
