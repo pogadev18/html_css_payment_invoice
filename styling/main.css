@@ -571,3 +571,63 @@ MOBILE
     margin-bottom: 10px;
   }
 }
+
+@media screen and (max-width: 980px) {
+  .basketWrapper {
+    flex-wrap: wrap;
+  }
+
+  .cardsAndPaymentsWrapper {
+    flex-basis: 100%;
+  }
+
+  .cardsWrapper {
+    flex-direction: row;
+  }
+
+  .billingTotal .button {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    padding: 30px 15px;
+  }
+
+  .cardsWrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .mainPaymentsList > li {
+    padding: 0 0 10px 15px;
+  }
+
+  .nestedPaymentsList {
+    flex-direction: column;
+  }
+
+  .nestedPaymentsList > li {
+    margin-bottom: 10px;
+  }
+
+  .nestedPaymentsList .paymentsStatus {
+    position: absolute;
+    right: 15px;
+  }
+
+  .nestedPaymentsList > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .nestedPaymentsList::after {
+    display: none;
+  }
+
+  .billingTotal .button {
+    width: 100%;
+  }
+}
